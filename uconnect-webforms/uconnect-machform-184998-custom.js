@@ -14,5 +14,12 @@ window.onload=function(){
       hideCustomAlert();
     }
   });
+  
+  // prevent spaces in PIN
+  $(function() {
+    $("input#element_12").on("keydown", function (e) {
+        return e.which !== 32;
+    });
+  });
 }
 
