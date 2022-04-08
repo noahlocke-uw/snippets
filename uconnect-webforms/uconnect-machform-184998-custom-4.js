@@ -1,7 +1,7 @@
 window.onload=function(){
   
-  val field = document.querySelector("#li_22");
-  val PIN = document.querySelector("#element_12");
+  var field = document.querySelector("#li_22");
+  var PIN = document.querySelector("#element_12");
   
   function showCustomAlert() {
     document.querySelector("#li_25").classList.remove("hideOnLoad");
