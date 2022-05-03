@@ -1,7 +1,7 @@
 window.onload=function(){
   
   var field = document.querySelector("#li_22");
-  var PIN = document.querySelector("#element_12");
+  var PIN = document.querySelector("#element_26");
   
   function showCustomAlert() {
     document.querySelector("#li_25").classList.remove("hideOnLoad");
@@ -25,8 +25,9 @@ window.onload=function(){
   // prevent spaces in PIN
   if (PIN) {
     PIN.addEventListener('keypress', function ( event ) {  
-     var key = event.keyCode;
-      if (key === 32) {
+      var isNumber = isFinite(event.key);
+      var key = event.keyCode;
+      if (key === 32 || !isNumber) {
         event.preventDefault();
       }
     });
